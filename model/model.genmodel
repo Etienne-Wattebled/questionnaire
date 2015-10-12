@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="" modelDirectory="/questionnaire/src" modelPluginID="questionnaire"
+    modelName="Questionnaire" importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0"
+    copyrightFields="false">
+  <foreignModel>model.ecore</foreignModel>
+  <genPackages prefix="Questionnaire" disposableProviderFactory="true" ecorePackage="model.ecore#/">
+    <genClasses ecoreClass="model.ecore#//Questionnaire">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Questionnaire/composants"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Questionnaire/liensQC"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference model.ecore#//Questionnaire/liensS"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//Composant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//Composant/label"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//LienSimpleSource"/>
+    <genClasses ecoreClass="model.ecore#//Pointable"/>
+    <genClasses ecoreClass="model.ecore#//Question"/>
+    <genClasses ecoreClass="model.ecore#//Debut"/>
+    <genClasses ecoreClass="model.ecore#//Fin"/>
+    <genClasses ecoreClass="model.ecore#//QuestionLibre"/>
+    <genClasses ecoreClass="model.ecore#//QuestionChoix"/>
+    <genClasses ecoreClass="model.ecore#//QuestionOuiNon">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//QuestionOuiNon/lienOui"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//QuestionOuiNon/lienNon"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//LienSimple">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//LienSimple/lienSimpleSource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//LienSimple/lienSimpleCible"/>
+    </genClasses>
+    <genClasses ecoreClass="model.ecore#//LienQuestionChoix">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute model.ecore#//LienQuestionChoix/choix"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//LienQuestionChoix/lienQuestionChoix"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference model.ecore#//LienQuestionChoix/pointable"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

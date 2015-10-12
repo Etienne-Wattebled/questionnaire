@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="questionnaire">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="LienSimpleFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="LienQuestionChoixFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="QuestionOuiNonLienOuiFigureTargetDecoration"/>
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="QuestionOuiNonLienNonFigureTargetDecoration"/>
+    <descriptors name="DebutFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="DebutFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="200" blue="200"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="DebutLabelFigure" text="Debut"/>
+      </actualFigure>
+      <accessors accessor="getFigureDebutLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="FinFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="FinFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="255" green="120" blue="120"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="FinLabelFigure" text="Fin"/>
+      </actualFigure>
+      <accessors accessor="getFigureFinLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="QuestionLibreFigure">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="QuestionLibreFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="220" green="220" blue="255"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="QuestionLibreLabelFigure" text="QuestionLibre"/>
+      </actualFigure>
+      <accessors accessor="getFigureQuestionLibreLabelFigure" figure="//@figures.0/@descriptors.2/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="QuestionChoixFigure">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="QuestionChoixFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="160" green="160" blue="255"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="QuestionChoixLabelFigure" text="QuestionChoix"/>
+      </actualFigure>
+      <accessors accessor="getFigureQuestionChoixLabelFigure" figure="//@figures.0/@descriptors.3/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="QuestionOuiNonFigure">
+      <actualFigure xsi:type="gmfgraph:Ellipse" name="QuestionOuiNonFigure">
+        <backgroundColor xsi:type="gmfgraph:RGBColor" red="130" green="100" blue="255"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="QuestionOuiNonLabelFigure" text="QuestionOuiNon"/>
+      </actualFigure>
+      <accessors accessor="getFigureQuestionOuiNonLabelFigure" figure="//@figures.0/@descriptors.4/@actualFigure/@children.0"/>
+    </descriptors>
+    <descriptors name="LienSimpleFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="LienSimpleFigure" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="LienQuestionChoixFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="LienQuestionChoixFigure" targetDecoration="//@figures.0/@figures.1"/>
+    </descriptors>
+    <descriptors name="LienQuestionChoixLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="LienQuestionChoixLabelLabel" text="LienQuestionChoix"/>
+    </descriptors>
+    <descriptors name="QuestionOuiNonLienOuiFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="QuestionOuiNonLienOuiFigure" targetDecoration="//@figures.0/@figures.2"/>
+    </descriptors>
+    <descriptors name="QuestionOuiNonLienOuiExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="QuestionOuiNonLienOuiExternalLabel" text="lienOui"/>
+    </descriptors>
+    <descriptors name="QuestionOuiNonLienNonFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="QuestionOuiNonLienNonFigure" targetDecoration="//@figures.0/@figures.3"/>
+    </descriptors>
+    <descriptors name="QuestionOuiNonLienNonExternalLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="QuestionOuiNonLienNonExternalLabel" text="lienNon"/>
+    </descriptors>
+  </figures>
+  <nodes name="Debut" figure="DebutFigure"/>
+  <nodes name="Fin" figure="FinFigure"/>
+  <nodes name="QuestionLibre" figure="QuestionLibreFigure"/>
+  <nodes name="QuestionChoix" figure="QuestionChoixFigure"/>
+  <nodes name="QuestionOuiNon" figure="QuestionOuiNonFigure"/>
+  <connections name="LienSimple" figure="LienSimpleFigure"/>
+  <connections name="LienQuestionChoix" figure="LienQuestionChoixFigure"/>
+  <connections name="QuestionOuiNonLienOui" figure="QuestionOuiNonLienOuiFigure"/>
+  <connections name="QuestionOuiNonLienNon" figure="QuestionOuiNonLienNonFigure"/>
+  <labels name="DebutLabel" figure="DebutFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="FinLabel" figure="FinFigure" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="QuestionLibreLabel" figure="QuestionLibreFigure" accessor="//@figures.0/@descriptors.2/@accessors.0"/>
+  <labels name="QuestionChoixLabel" figure="QuestionChoixFigure" accessor="//@figures.0/@descriptors.3/@accessors.0"/>
+  <labels name="QuestionOuiNonLabel" figure="QuestionOuiNonFigure" accessor="//@figures.0/@descriptors.4/@accessors.0"/>
+  <labels name="LienQuestionChoixLabel" figure="LienQuestionChoixLabelFigure" elementIcon="false"/>
+  <labels name="QuestionOuiNonLienOuiExternalLabel" figure="QuestionOuiNonLienOuiExternalLabelFigure" elementIcon="false"/>
+  <labels name="QuestionOuiNonLienNonExternalLabel" figure="QuestionOuiNonLienNonExternalLabelFigure" elementIcon="false"/>
+</gmfgraph:Canvas>

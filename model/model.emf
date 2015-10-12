@@ -1,0 +1,53 @@
+@namespace(uri="questionnaire", prefix="questionnaire")
+package questionnaire;
+
+@gmf.diagram
+class Questionnaire {
+	val Composant[*] composants;
+	val LienQuestionChoix[*] liensQC;
+	val LienSimple[*] liensS;
+}
+
+class Composant { 
+	attr String label;
+}
+
+class LienSimpleSource { }
+class Pointable { }
+
+class Question extends Composant, Pointable { }
+
+@gmf.node(label="label",color="255,200,200")
+class Debut extends Composant, LienSimpleSource { }
+
+@gmf.node(label="label",color="255,120,120")
+class Fin extends Composant, Pointable { }
+
+@gmf.node(label="label",figure="ellipse",color="220,220,255")
+class QuestionLibre extends Question, LienSimpleSource { }
+
+@gmf.node(label="label",figure="ellipse",color="160,160,255")
+class QuestionChoix extends Question { }
+
+@gmf.node(label="label",figure="ellipse",color="130,100,255")
+class QuestionOuiNon extends Question {	
+	@gmf.link(label.text="lienOui",target.decoration="arrow")
+	ref Pointable lienOui;
+	
+	@gmf.link(label.text="lienNon",target.decoration="arrow")
+	ref Pointable lienNon;
+}
+
+
+@gmf.link(source="lienSimpleSource",target="lienSimpleCible",target.decoration="arrow")
+class LienSimple {
+	ref LienSimpleSource lienSimpleSource;
+	ref Pointable lienSimpleCible;
+}
+
+@gmf.link(source="lienQuestionChoix",target="pointable",label="choix",target.decoration="arrow")
+class LienQuestionChoix {
+	attr String choix;
+	ref QuestionChoix lienQuestionChoix;
+	ref Pointable pointable;
+}
